@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_navigation"
+    app:startDestination="@id/MainTodoFragment">
+
+    <fragment
+        android:id="@+id/MainTodoFragment"
+        android:name="com.example.todoappcat23.view.MainTodoFragment"
+        android:label="Events"
+        tools:layout="@layout/fragment_main_todo">
+
+        <action
+            android:id="@+id/action_MainTodoFragment_to_DetailsEventFragment"
+            app:destination="@id/DetailsEventFragment" />
+        <action
+            android:id="@+id/action_MainTodoFragment_to_CreateEventFragment"
+            app:destination="@id/CreateEventFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CreateEventFragment"
+        android:name="com.example.todoappcat23.view.CreateEventFragment"
+        android:label="Add new event"
+        tools:layout="@layout/fragment_create_event">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailsEventFragment"
+        android:name="com.example.todoappcat23.view.DetailsEventFragment"
+        android:label="Event details"
+        tools:layout="@layout/fragment_details_event">
+
+        <action
+            android:id="@+id/action_DetailsEventFragment_to_CreateEventFragment"
+            app:destination="@id/CreateEventFragment" />
+    </fragment>
+
+</navigation>
